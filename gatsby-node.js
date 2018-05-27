@@ -40,13 +40,3 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     )
   })
 }
-
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  if (stage === 'build-html') {
-    console.log(config)
-    // config.loader('null', {
-    //   test: /react-side-bar/,
-    //   loader: 'null-loader',
-    // })
-  }
-}
