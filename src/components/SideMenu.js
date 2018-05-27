@@ -7,6 +7,12 @@ export default class SideMenu extends Component {
     return (
       <nav className="side-menu">
         <header>
+          <div className="pull-left">
+            <img
+              src="https://www.codewars.com/users/ruden91/badges/micro"
+              alt="codewars-badge"
+            />
+          </div>
           <div className="pull-right">
             <button onClick={onCloseSidebar}>CLOSE</button>
           </div>

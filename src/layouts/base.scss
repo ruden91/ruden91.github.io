@@ -112,7 +112,7 @@ button {
 .side-menu {
   > header {
     height: 70px;
-    padding: 0 30px;
+    padding: 0 30px 0 10px;
     line-height: 70px;
     font-size: 13px;
     font-weight: normal;
@@ -126,6 +126,15 @@ button {
       display: block;
       clear: both;
     }
+  }
+}
+.pull-left {
+  float: left;
+  height: 100%;
+
+  img {
+    display: inline-block;
+    padding: 26px 0;
   }
 }
 .pull-right {
@@ -165,6 +174,8 @@ nav {
     margin: 0;
     padding: 0;
     li {
+      margin: 0;
+      padding: 0;
       list-style: none;
       > span {
         position: relative;
