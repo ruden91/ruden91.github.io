@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UserCard from './UserCard'
+import Link from 'gatsby-link'
 
 export default class SideMenu extends Component {
   render() {
@@ -22,10 +23,14 @@ export default class SideMenu extends Component {
             <UserCard username="ruden91" />
           </li>
           <li>
-            <span>Home</span>
+            <span>
+              <Link to="/">HOME</Link>
+            </span>
           </li>
           <li>
-            <span>Winners</span>
+            <span>
+              <Link to="/blog">BLOG</Link>
+            </span>
           </li>
           <li>
             <span>Nominees</span>

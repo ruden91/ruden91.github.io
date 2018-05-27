@@ -14,8 +14,10 @@
     "gatsby-transformer-remark": "^1.7.32",
     "inquirer": "^5.1.0",
     "lodash": "^4.17.4",
+    "null-loader": "^0.1.1",
     "react-github-cards": "^1.1.1",
     "react-side-bar": "^0.3.5",
+    "surge": "^0.20.1",
     "typography-theme-github": "^0.15.10",
     "yargs-parser": "^10.0.0"
   },

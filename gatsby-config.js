@@ -18,7 +18,7 @@ try {
 }
 
 module.exports = {
-  pathPrefix: '/gatsby-contentful-starter',
+  pathPrefix: '/ruden91.github.io',
   plugins: [
     {
       resolve: 'gatsby-plugin-typography',

@@ -3,8 +3,9 @@ import Link from 'gatsby-link'
 import base from './base.scss'
 import Container from '../components/container'
 import Header from '../components/Header'
-import Sidebar from 'react-side-bar'
+import Footer from '../components/Footer'
 import SideMenu from '../components/SideMenu'
+import Sidebar from 'react-side-bar'
 class Template extends React.Component {
   constructor(props) {
     super(props)
@@ -12,7 +13,7 @@ class Template extends React.Component {
     this.state = {
       opened: false,
     }
-
+    this.Sidebar
     this.openSidebar = this.openSidebar.bind(this)
     this.closeSidebar = this.closeSidebar.bind(this)
   }
@@ -28,11 +29,9 @@ class Template extends React.Component {
       opened: false,
     })
   }
-
   render() {
     const { opened } = this.state
     const { location, children } = this.props
-    let header
 
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
@@ -53,6 +52,7 @@ class Template extends React.Component {
         >
           <Header onOpenSidebar={this.openSidebar} />
           {children()}
+          <Footer />
         </Sidebar>
       </div>
     )
