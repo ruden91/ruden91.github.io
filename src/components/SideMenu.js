@@ -33,10 +33,14 @@ export default class SideMenu extends Component {
             </span>
           </li>
           <li>
-            <span>Nominees</span>
+            <span>
+              <Link to="/about">ABOUT</Link>
+            </span>
           </li>
           <li>
-            <span>Collections</span>
+            <span>
+              <Link to="/resume">RESUME</Link>
+            </span>
           </li>
           <li>
             <span>Professional directory</span>
@@ -49,9 +53,6 @@ export default class SideMenu extends Component {
           </li>
           <li>
             <span>eBooks & Publications</span>
-          </li>
-          <li>
-            <span>About Us</span>
           </li>
         </ul>
       </nav>

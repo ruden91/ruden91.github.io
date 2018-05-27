@@ -4,15 +4,27 @@ import Link from 'gatsby-link'
 
 export default ({ article }) => (
   <div className={styles.preview}>
-    <img src={`${article.heroImage.file.url}?fit=scale&w=350&h=196`} alt="" />
-    <h3 className={styles.previewTitle}>
-      <Link to={`/blog/${article.slug}`}>{article.title}</Link>
-    </h3>
-    <small>{article.publishDate}</small>
-    <p
-      dangerouslySetInnerHTML={{
-        __html: article.description.childMarkdownRemark.html,
-      }}
-    />
+    <Link to={`/blog/${article.slug}`}>
+      <span className="image-wrap">
+        <img
+          src={`${article.heroImage.file.url}?fit=scale&w=350&h=196`}
+          alt=""
+        />
+      </span>
+      <div>
+        <h3 className={styles.previewTitle}>{article.title}</h3>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: article.description.childMarkdownRemark.html,
+          }}
+        />
+        <footer>
+          <p>
+            BY <strong>RUDEN</strong>
+          </p>
+          <small>{article.publishDate}</small>
+        </footer>
+      </div>
+    </Link>
   </div>
 )

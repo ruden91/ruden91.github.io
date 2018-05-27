@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Link from 'gatsby-link'
 export default class header extends Component {
   render() {
     const { onOpenSidebar } = this.props
@@ -17,7 +17,7 @@ export default class header extends Component {
           </button>
         </div>
         <div className="logo-header">
-          <a href="#">FERuden</a>
+          <Link to="/">FERuden</Link>
         </div>
         <div className="header__right-box">
           <button className="header__search-button">S</button>

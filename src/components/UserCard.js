@@ -36,7 +36,7 @@ export default class UserCard extends React.Component {
   render() {
     if (this.state.user) {
       const { username } = this.props
-      const avatar_url = this.state.user.avatar_url + '&s=48'
+      const avatar_url = this.state.user.avatar_url
       const profileUrl = this.state.user.html_url
       const gistUrl = `https://gist.github.com/${username}`
       const followersUrl = `${profileUrl}/followers`
