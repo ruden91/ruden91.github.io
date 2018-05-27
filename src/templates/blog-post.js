@@ -2,18 +2,19 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
-import styles from './blog-post.module.css'
-
+import './blog-post.scss'
+import Highlight from 'react-highlight'
+import './highlight.css'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <div style={{ background: '#fff' }}>
+      <div>
         <Helmet title={`${post.title} | ${siteTitle}`} />
-        <div className="wrapper">
-          <div className={styles.hero}>
+        <div className="blog-container">
+          <div className="image-wrap">
             <img
               src={`${post.heroImage.file.url}?w=1180&h=400&fit=fill`}
               alt=""
@@ -27,11 +28,14 @@ class BlogPostTemplate extends React.Component {
           >
             {post.publishDate}
           </p>
-          <div
+          {/* <div
             dangerouslySetInnerHTML={{
               __html: post.body.childMarkdownRemark.html,
             }}
-          />
+          /> */}
+          <Highlight innerHTML={true} language="javascript">
+            {post.body.childMarkdownRemark.html}
+          </Highlight>
         </div>
       </div>
     )

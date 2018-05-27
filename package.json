@@ -16,6 +16,8 @@
     "lodash": "^4.17.4",
     "null-loader": "^0.1.1",
     "react-github-cards": "^1.1.1",
+    "react-highlight": "^0.12.0",
+    "react-highlight.js": "^1.0.7",
     "react-side-bar": "^0.3.5",
     "surge": "^0.20.1",
     "typography-theme-github": "^0.15.10",
@@ -31,26 +33,25 @@
     "gh-pages": "^1.1.0",
     "prettier": "^1.10.2"
   },
-  "homepage":
-    "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
-  "keywords": ["gatsby", "contentful"],
+  "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
+  "keywords": [
+    "gatsby",
+    "contentful"
+  ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/contentful-userland/gatsby-contentful-starter.git"
+    "url": "git+https://github.com/contentful-userland/gatsby-contentful-starter.git"
   },
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -b master -d public",
-    "fix-semi":
-      "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
     "postinstall": "node ./bin/hello.js",
     "setup": "node ./bin/setup.js",
     "heroku-postbuild": "gatsby build"
