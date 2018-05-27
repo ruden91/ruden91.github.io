@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import ArticlePreview from '../components/article-preview'
 
-class BlogIndex extends React.Component {
+class AchieveIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default AchieveIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {

@@ -29,7 +29,7 @@ export default class SideMenu extends Component {
           </li>
           <li>
             <span>
-              <Link to="/blog">BLOG</Link>
+              <Link to="/achieve">ACHIEVE</Link>
             </span>
           </li>
           <li>

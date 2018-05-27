@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+// import Logo from './logo'
 import Link from 'gatsby-link'
+
 export default class header extends Component {
   render() {
     const { onOpenSidebar } = this.props

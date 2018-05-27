@@ -23,7 +23,12 @@ try {
 }
 
 module.exports = {
-  pathPrefix: '/ruden91.github.io',
+  pathPrefix: '/',
+  siteMetadata: {
+    title: `FERuden`,
+    siteUrl: `https://ruden91.github.io/`,
+    description: `프론트엔드 개발지식 나눔 블로그`,
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-typography',
