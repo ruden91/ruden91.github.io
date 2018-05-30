@@ -16,7 +16,7 @@ class BlogPostTemplate extends React.Component {
       identifier: post.id,
       title: post.title,
     }
-    console.log(post)
+
     return (
       <div>
         <Helmet title={`${post.title} | ${siteTitle}`} />

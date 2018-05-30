@@ -1,3 +1,6 @@
+const config = require('./data/SiteConfig')
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+
 let contentfulConfig
 
 try {
@@ -25,9 +28,16 @@ try {
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    title: `FERuden`,
-    siteUrl: `https://ruden91.github.io/`,
-    description: `프론트엔드 개발지식 나눔 블로그`,
+    siteUrl: config.siteUrl + pathPrefix,
+    rssMetadata: {
+      // site_url: config.siteUrl + pathPrefix,
+      // feed_url: config.siteUrl + pathPrefix + config.siteRss,
+      title: config.siteTitle,
+      description: config.siteDescription,
+      // image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
+      author: config.userName,
+      copyright: config.copyright,
+    },
   },
   plugins: [
     {

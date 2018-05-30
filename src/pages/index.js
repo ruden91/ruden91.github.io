@@ -2,18 +2,22 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-
+import SEO from '../components/SEO/SEO'
+import config from '../../data/SiteConfig'
 import './default.scss'
 import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
   render() {
-    const metaData = get(this, 'props.data.site.siteMetadata')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    console.log(...metaData)
+
     return (
       <section style={{ background: '#f4f7f6' }} className="container">
-        <Helmet {...metaData} />
+        <Helmet>
+          <title>{config.siteTitle}</title>
+          <link rel="canonical" href={`${config.siteUrl}`} />
+        </Helmet>
+        <SEO postEdges={posts} />
         <div>
           <ul className="article-list">
             {posts.map(({ node }) => {
@@ -54,13 +58,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        title
-        siteUrl
-        description
-      }
-    }
+
     allContentfulPerson(filter: { id: { eq: "c15jwOBqpxqSAOy2eOO4S0m" } }) {
       edges {
         node {

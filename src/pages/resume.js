@@ -6,6 +6,7 @@ export default class Resume extends React.Component {
   render() {
     return (
       <div>
+        <Helmet title="resume" />
         <p>Resume</p>
       </div>
     )
