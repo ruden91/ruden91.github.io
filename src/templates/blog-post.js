@@ -1,5 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import SEO from '../components/SEO/SEO'
+import config from '../../data/SiteConfig'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import './blog-post.scss'
@@ -10,6 +12,7 @@ import { DiscussionEmbed } from 'disqus-react'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
+    const pathName = `blog/${this.props.pathContext.slug}`
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const disqusShortname = 'https-ruden91-github-io'
     const disqusConfig = {
@@ -19,7 +22,11 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div>
-        <Helmet title={`${post.title} | ${siteTitle}`} />
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+          <link rel="canonical" href={`${config.siteUrl}/${pathName}`} />
+        </Helmet>
+        <SEO postPath={pathName} postNode={post} postSEO />
         <div className="blog-container">
           <div className="image-wrap">
             <img

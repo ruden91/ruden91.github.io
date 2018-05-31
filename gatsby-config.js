@@ -1,6 +1,7 @@
+require('dotenv').config()
 const config = require('./data/SiteConfig')
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
-
+const ContentfulToAlgolia = require('contentful-to-algolia')
 let contentfulConfig
 
 try {
@@ -25,6 +26,55 @@ try {
   }
 }
 
+const query = `{
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts|pages/[0-9]+.*--/"}}) {
+    edges {
+      node {
+        objectID: fileAbsolutePath
+        fields {
+          slug
+        }
+        internal {
+          content
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}`
+
+const queries = [
+  {
+    query,
+    transformer: ({ data }) =>
+      data.allMarkdownRemark.edges.map(({ node }) => node),
+  },
+]
+
+const Sync = new ContentfulToAlgolia({
+  algolia: {
+    applicationId: process.env.ALGOLIA_APP_ID,
+    apiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY,
+    // indexPrefix: 'dev_', // for Development mode
+  },
+  contentful: {
+    accessToken: contentfulConfig.accessToken,
+    space: contentfulConfig.spaceId,
+    // host: 'preview.contentful.com', // for Drafts
+  },
+  locales: [['en-US', 'en'], ['de-DE', 'de']],
+})
+console.log(Sync)
+Sync.sync(['blog_post'], 'gatsby_blog', data => {
+  // console.log(data)
+  // data.forEach(entry => {
+  //   console.log(entry)
+  //   // console.log(`Entry ${entry.id} saved.`);
+  // })
+})
+
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
@@ -38,12 +88,35 @@ module.exports = {
       author: config.userName,
       copyright: config.copyright,
     },
+    algolia: {
+      appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : '',
+      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+        ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+        : '',
+      indexName: process.env.ALGOLIA_INDEX_NAME
+        ? process.env.ALGOLIA_INDEX_NAME
+        : '',
+    },
   },
   plugins: [
     {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: `src/utils/typography.js`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : '',
+        apiKey: process.env.ALGOLIA_ADMIN_API_KEY
+          ? process.env.ALGOLIA_ADMIN_API_KEY
+          : '',
+        indexName: process.env.ALGOLIA_INDEX_NAME
+          ? process.env.ALGOLIA_INDEX_NAME
+          : '',
+        queries,
+        chunkSize: 10000, // default: 1000
       },
     },
     'gatsby-plugin-sass',

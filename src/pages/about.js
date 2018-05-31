@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
-export default class About extends React.Component {
+export default class AboutPage extends React.Component {
   render() {
     return (
       <div>
@@ -10,7 +11,7 @@ export default class About extends React.Component {
           <title>{`About | ${config.siteTitle}`}</title>
           <link rel="canonical" href={`${config.siteUrl}/about/`} />
         </Helmet>
-
+        <SEO />
         <p>About</p>
       </div>
     )

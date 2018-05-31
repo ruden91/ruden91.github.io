@@ -42,18 +42,6 @@ export default class SideMenu extends Component {
               <Link to="/resume">RESUME</Link>
             </span>
           </li>
-          <li>
-            <span>Professional directory</span>
-          </li>
-          <li>
-            <span>Jobs & Talent</span>
-          </li>
-          <li>
-            <span>Magazine</span>
-          </li>
-          <li>
-            <span>eBooks & Publications</span>
-          </li>
         </ul>
       </nav>
     )
