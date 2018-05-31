@@ -1,0 +1,91 @@
+.about {
+  > article {
+    position: relative;
+  }
+  h2 {
+    margin: 0;
+  }
+}
+.tech-cube {
+  ul {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    li {
+      float: left;
+      width: 20%;
+      margin: 0;
+      list-style: none;
+      padding: 5px;
+      img {
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+}
+.about-modal {
+  transition: all 0.25s ease-in-out;
+  transform: scale(0);
+}
+.open-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  transform: scale(1);
+  .overlay-content {
+    height: 100%;
+    overflow: scroll;
+
+    .left-side {
+      margin: 0;
+      float: left;
+      height: 100%;
+      width: 30%;
+      background-color: #fff;
+      border-right: 1px solid #f7f7f7;
+      overflow-y: scroll;
+      li {
+        padding: 20px;
+        border-bottom: 1px solid #f7f7f7;
+        cursor: pointer;
+      }
+    }
+
+    > div {
+      float: left;
+      width: 70%;
+      height: 100%;
+    }
+  }
+}
+
+.tech-cube {
+  li {
+    cursor: pointer;
+  }
+}
+
+.inner {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

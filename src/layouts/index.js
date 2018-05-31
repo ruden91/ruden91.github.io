@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import SideMenu from '../components/SideMenu'
 import Sidebar from 'react-side-bar'
+
 class Template extends React.Component {
   constructor(props) {
     super(props)

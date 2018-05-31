@@ -1,3 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+div.transition-group {
+  position: relative;
+}
+section.route-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
 .container {
   position: relative;
   max-width: 1773px;

@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
+import About from '../components/About/About'
+
 export default class AboutPage extends React.Component {
   render() {
     return (
@@ -12,7 +14,7 @@ export default class AboutPage extends React.Component {
           <link rel="canonical" href={`${config.siteUrl}/about/`} />
         </Helmet>
         <SEO />
-        <p>About</p>
+        <About />
       </div>
     )
   }

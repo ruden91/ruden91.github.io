@@ -6,13 +6,15 @@ import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
 import './default.scss'
 import ArticlePreview from '../components/article-preview'
-
+// import 'devicon/devicon.css'
 class RootIndex extends React.Component {
   render() {
+    const { transition } = this.props
+
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
 
     return (
-      <section style={{ background: '#f4f7f6' }} className="container">
+      <section style={transition && transition.style} className="container">
         <Helmet>
           <title>{config.siteTitle}</title>
           <link rel="canonical" href={`${config.siteUrl}`} />
