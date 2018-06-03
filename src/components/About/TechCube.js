@@ -1,19 +1,26 @@
 import React, { Component } from 'react'
-import ReactImage from 'devicon/icons/react/react-original-wordmark.svg'
-import D3Image from 'devicon/icons/d3js/d3js-original.svg'
-import WebpackImage from 'devicon/icons/webpack/webpack-original.svg'
-import VueImage from 'devicon/icons/vuejs/vuejs-original-wordmark.svg'
-import TypescriptImage from 'devicon/icons/typescript/typescript-original.svg'
-import SassImage from 'devicon/icons/sass/sass-original.svg'
-import NodejsImage from 'devicon/icons/nodejs/nodejs-original.svg'
-import LaravelImage from 'devicon/icons/laravel/laravel-plain-wordmark.svg'
-import jQueryImage from 'devicon/icons/jquery/jquery-original-wordmark.svg'
-import JsImage from 'devicon/icons/javascript/javascript-original.svg'
-import HtmlImage from 'devicon/icons/html5/html5-original-wordmark.svg'
-import GithubImage from 'devicon/icons/github/github-original-wordmark.svg'
-import GitlabImage from 'devicon/icons/gitlab/gitlab-original-wordmark.svg'
-import CssImage from 'devicon/icons/css3/css3-original-wordmark.svg'
-import HandlebarsImage from 'devicon/icons/handlebars/handlebars-original-wordmark.svg'
+// import ReactImage from 'devicon/icons/react/react-original-wordmark.svg'
+// import D3Image from 'devicon/icons/d3js/d3js-original.svg'
+// import WebpackImage from 'devicon/icons/webpack/webpack-original.svg'
+// import VueImage from 'devicon/icons/vuejs/vuejs-original-wordmark.svg'
+// import TypescriptImage from 'devicon/icons/typescript/typescript-original.svg'
+// import SassImage from 'devicon/icons/sass/sass-original.svg'
+// import NodejsImage from 'devicon/icons/nodejs/nodejs-original.svg'
+// import LaravelImage from 'devicon/icons/laravel/laravel-plain-wordmark.svg'
+// import jQueryImage from 'devicon/icons/jquery/jquery-original-wordmark.svg'
+// import JsImage from 'devicon/icons/javascript/javascript-original.svg'
+// import HtmlImage from 'devicon/icons/html5/html5-original-wordmark.svg'
+// import GithubImage from 'devicon/icons/github/github-original-wordmark.svg'
+// import GitlabImage from 'devicon/icons/gitlab/gitlab-original-wordmark.svg'
+// import CssImage from 'devicon/icons/css3/css3-original-wordmark.svg'
+// import HandlebarsImage from 'devicon/icons/handlebars/handlebars-original-wordmark.svg'
+// import ReduxImage from './images/redux.svg'
+// import FirebaseImage from './images/firebase.svg'
+// import ReduxSagaImage from './images/redux-saga.svg'
+// import GatsbyImage from './images/gatsby.svg'
+// import NpmImage from './images/npm.svg'
+// import HighchartsImage from './images/highcharts.svg'
+// import FluxImage from './images/flux.svg'
 export default class TechCube extends Component {
   constructor(props) {
     super(props)
@@ -22,7 +29,7 @@ export default class TechCube extends Component {
     const { toggleModal, onHandleModal } = this.props
     return (
       <div className="tech-cube">
-        <ul>
+        {/* <ul>
           <li onClick={() => onHandleModal('ReactJS')}>
             <img src={ReactImage} />
           </li>
@@ -68,7 +75,28 @@ export default class TechCube extends Component {
           <li>
             <img src={HandlebarsImage} />
           </li>
-        </ul>
+          <li>
+            <img src={ReduxImage} />
+          </li>
+          <li>
+            <img src={FirebaseImage} />
+          </li>
+          <li>
+            <img src={ReduxSagaImage} />
+          </li>
+          <li>
+            <img src={GatsbyImage} />
+          </li>
+          <li>
+            <img src={NpmImage} />
+          </li>
+          <li>
+            <img src={HighchartsImage} />
+          </li>
+          <li>
+            <img src={FluxImage} />
+          </li>
+        </ul> */}
       </div>
     )
   }

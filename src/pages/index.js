@@ -6,25 +6,73 @@ import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
 import './default.scss'
 import ArticlePreview from '../components/article-preview'
+import Filters from '../components/Filters/Filters'
 // import 'devicon/devicon.css'
 class RootIndex extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      initialPosts: [],
+      posts: [],
+      filters: [
+        {
+          name: '알고리즘',
+          value: 'algorithm',
+        },
+        {
+          name: 'HTML5',
+          value: 'html5',
+        },
+        {
+          name: '자바스크립트',
+          value: 'javascript',
+        },
+        {
+          name: 'CSS3',
+          value: 'css3',
+        },
+      ],
+      filter: '',
+    }
+  }
+  componentDidMount() {
+    this.setState({
+      initialPosts: this.props.data.allContentfulBlogPost.edges,
+      posts: this.props.data.allContentfulBlogPost.edges,
+    })
+  }
+  handleFilterPost = filter => {
+    const { initialPosts } = this.state
+    const posts = initialPosts.filter(item => {
+      return item.node.categories[0] === filter
+    })
+
+    this.setState({
+      filter,
+      posts,
+    })
+  }
+
   render() {
     const { transition } = this.props
-
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-
+    const { posts, filters } = this.state
     return (
-      <section style={transition && transition.style} className="container">
+      <section>
         <Helmet>
           <title>{config.siteTitle}</title>
           <link rel="canonical" href={`${config.siteUrl}`} />
         </Helmet>
         <SEO postEdges={posts} />
-        <div>
+        <Filters
+          filters={this.state.filters}
+          onHandleFilter={this.handleFilterPost}
+        />
+        <div className="container">
           <ul className="article-list">
             {posts.map(({ node }) => {
               return (
-                <li key={node.slug} className="col-3">
+                <li key={node.id} className="col-3">
                   <ArticlePreview article={node} />
                 </li>
               )
@@ -45,6 +93,8 @@ export const pageQuery = graphql`
         node {
           title
           slug
+          id
+          categories
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
@@ -55,25 +105,6 @@ export const pageQuery = graphql`
           description {
             childMarkdownRemark {
               html
-            }
-          }
-        }
-      }
-    }
-
-    allContentfulPerson(filter: { id: { eq: "c15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          image {
-            file {
-              url
-              fileName
-              contentType
             }
           }
         }

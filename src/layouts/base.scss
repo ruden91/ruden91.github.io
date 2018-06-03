@@ -10,12 +10,13 @@ button {
 .side-bar-panel {
   background-color: rgb(244, 247, 246);
   > div {
-    z-index: 2;
+    z-index: 3;
   }
 }
 
 .side-bar-panel {
   height: 100vh;
+  overflow-y: scroll;
   > header {
     position: relative;
     height: 70px;
@@ -130,6 +131,16 @@ button {
       clear: both;
     }
   }
+
+  ul {
+    li {
+      &.is-active {
+        a {
+          color: #49c5b6;
+        }
+      }
+    }
+  }
 }
 .pull-left {
   float: left;
@@ -184,16 +195,20 @@ nav {
         position: relative;
         display: block;
         padding: 24px 36px;
-        font-size: 17px;
-        font-weight: bold;
-        color: #202121;
+        font-size: 15px;
         cursor: pointer;
         background: #f4f7f6;
         border-bottom: 1px solid #e6eaea;
         transition: background 0.3s ease-in-out, border 0.3s ease-in-out,
           color 0.3s ease-in-out;
-      }
 
+        a {
+          text-transform: uppercase;
+        }
+      }
+      a {
+        color: #202121;
+      }
       &:hover {
         > span {
           background-color: #fcfcfc;
@@ -229,6 +244,6 @@ nav {
   float: right;
 }
 
-.header__search-button {
-  padding: 0 23px;
+#disqus_thread {
+  padding: 20px;
 }

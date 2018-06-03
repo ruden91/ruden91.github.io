@@ -111,11 +111,11 @@ export default class About extends Component {
             </Test>
           </div>
         </article>
-        <article style={{ height }}>
+        {/* <article style={{ height }}>
           <Test>
             <TechCube />
           </Test>
-        </article>
+        </article> */}
         <div className={techCubeClass}>
           <div className="overlay-content">
             <ul className="left-side">

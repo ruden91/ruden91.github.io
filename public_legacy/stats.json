@@ -1,0 +1,96 @@
+{
+  "assetsByChunkName": {
+    "path---blog-dtd-document-type-definition": [
+      "path---blog-dtd-document-type-definition-faecbb219a7728983bda.js",
+      "path---blog-dtd-document-type-definition-faecbb219a7728983bda.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-f525cbe7cb8f8656caab.js",
+      "component---src-pages-index-js-f525cbe7cb8f8656caab.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "path---blog-javascript-hoisting": [
+      "path---blog-javascript-hoisting-35f75438e1886418796f.js",
+      "path---blog-javascript-hoisting-35f75438e1886418796f.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-9d0c88f127ecc9303d7c.js",
+      "component---src-templates-blog-post-js-9d0c88f127ecc9303d7c.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-d1b8de3989f073cea8af.js",
+      "component---src-layouts-index-js-d1b8de3989f073cea8af.js.map"
+    ],
+    "path---blog-year-to-century": [
+      "path---blog-year-to-century-7aec77f45974ba67c9df.js",
+      "path---blog-year-to-century-7aec77f45974ba67c9df.js.map"
+    ],
+    "path---index": [
+      "path---index-f4de8f2a65cafbe913d1.js",
+      "path---index-f4de8f2a65cafbe913d1.js.map"
+    ],
+    "component---src-pages-search-js": [
+      "component---src-pages-search-js-678c9f4ae403cde83079.js",
+      "component---src-pages-search-js-678c9f4ae403cde83079.js.map"
+    ],
+    "component---src-pages-resume-js": [
+      "component---src-pages-resume-js-eadf7040f451d2c2a04a.js",
+      "component---src-pages-resume-js-eadf7040f451d2c2a04a.js.map"
+    ],
+    "commons": [
+      "commons-492697d7f5b00060fa09.js",
+      "build-js-styles.css",
+      "commons-492697d7f5b00060fa09.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---blog-1": [
+      "path---blog-1-b2af04c564e7cd9119e9.js",
+      "path---blog-1-b2af04c564e7cd9119e9.js.map"
+    ],
+    "path---blog-inline-vs-block-vs-inline-block": [
+      "path---blog-inline-vs-block-vs-inline-block-ee95161b11fab495b95f.js",
+      "path---blog-inline-vs-block-vs-inline-block-ee95161b11fab495b95f.js.map"
+    ],
+    "path---blog-codewars-will-you-make-it": [
+      "path---blog-codewars-will-you-make-it-9b3614203e7196774d80.js",
+      "path---blog-codewars-will-you-make-it-9b3614203e7196774d80.js.map"
+    ],
+    "path---blog-codewars-string-reordering": [
+      "path---blog-codewars-string-reordering-c111aeae9a2513219f2a.js",
+      "path---blog-codewars-string-reordering-c111aeae9a2513219f2a.js.map"
+    ],
+    "path---resume": [
+      "path---resume-a0e39f21c11f6a62c5ab.js",
+      "path---resume-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---achieve": [
+      "path---achieve-3eb1ee34e3eef54cf039.js",
+      "path---achieve-3eb1ee34e3eef54cf039.js.map"
+    ],
+    "app": [
+      "app-987323cc55118e1db908.js",
+      "build-js-styles.css",
+      "app-987323cc55118e1db908.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---search": [
+      "path---search-4db08fbf9cb70a35d0a2.js",
+      "path---search-4db08fbf9cb70a35d0a2.js.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-32a1c22b9f8677561732.js",
+      "component---src-pages-about-js-32a1c22b9f8677561732.js.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-achieve-js": [
+      "component---src-pages-achieve-js-7dbb14b5dcfe78b02aca.js",
+      "component---src-pages-achieve-js-7dbb14b5dcfe78b02aca.js.map"
+    ]
+  }
+}

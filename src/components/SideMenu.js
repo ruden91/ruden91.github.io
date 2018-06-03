@@ -1,8 +1,32 @@
 import React, { Component } from 'react'
 import UserCard from './UserCard'
 import Link from 'gatsby-link'
+import classNames from 'classnames'
 
 export default class SideMenu extends Component {
+  constructor(props) {
+    super(props)
+    this.path
+    this.state = {
+      sideItems: [
+        {
+          home: '/',
+        },
+        {
+          achieve: '/achieve',
+        },
+        {
+          about: '/about',
+        },
+        {
+          resume: '/resume',
+        },
+      ],
+    }
+  }
+  componentDidMount() {
+    this.path = window.location.pathname
+  }
   render() {
     const { onCloseSidebar } = this.props
     return (
@@ -10,7 +34,7 @@ export default class SideMenu extends Component {
         <header>
           <div className="pull-left">
             <img
-              src="https://www.codewars.com/users/ruden91/badges/micro"
+              src="https://www.codewars.com/users/reactorRD/badges/micro"
               alt="codewars-badge"
             />
           </div>
@@ -22,26 +46,20 @@ export default class SideMenu extends Component {
           <li>
             <UserCard username="ruden91" />
           </li>
-          <li>
-            <span>
-              <Link to="/">HOME</Link>
-            </span>
-          </li>
-          <li>
-            <span>
-              <Link to="/achieve">ACHIEVE</Link>
-            </span>
-          </li>
-          <li>
-            <span>
-              <Link to="/about">ABOUT</Link>
-            </span>
-          </li>
-          <li>
-            <span>
-              <Link to="/resume">RESUME</Link>
-            </span>
-          </li>
+          {this.state.sideItems.map(value => (
+            <li
+              key={Object.keys(value)[0]}
+              className={`${
+                value[Object.keys(value)[0]] === this.path ? 'is-active' : ''
+              } `}
+            >
+              <span>
+                <Link to={value[Object.keys(value)[0]]}>
+                  {Object.keys(value)[0]}
+                </Link>
+              </span>
+            </li>
+          ))}
         </ul>
       </nav>
     )

@@ -1,0 +1,26 @@
+@import '../../style/mixins/index';
+.filter-tabs {
+  @include clearfix;
+  border-bottom: 1px solid #e6eaea;
+  margin: 0;
+  padding: 0;
+  li {
+    float: left;
+    border-right: 1px solid #e6eaea;
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    font-size: 13px;
+  }
+  .filter-tabs__title {
+    font-weight: 500;
+  }
+  .filter-by {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #a6abab;
+      background-color: #fff;
+    }
+  }
+}

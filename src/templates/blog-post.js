@@ -12,6 +12,7 @@ import { DiscussionEmbed } from 'disqus-react'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
+    console.log(post)
     const pathName = `blog/${this.props.pathContext.slug}`
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const disqusShortname = 'https-ruden91-github-io'
@@ -60,6 +61,7 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       id
+      tags
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
         file {

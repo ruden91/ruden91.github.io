@@ -15,6 +15,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 node {
                   title
                   slug
+                  id
                 }
               }
             }
@@ -27,6 +28,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         const posts = result.data.allContentfulBlogPost.edges
+        console.log(posts)
         posts.forEach((post, index) => {
           createPage({
             path: `/blog/${post.node.slug}/`,

@@ -12,13 +12,6 @@ export default class Resume extends React.Component {
           <link rel="canonical" href={`${config.siteUrl}/resume/`} />
         </Helmet>
         <div style={{ height: 1500 }} />
-        <Test>
-          <img src={ReactImage} />
-        </Test>
-        <div style={{ height: 1500 }} />
-        <Test>
-          <p>hello~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-        </Test>
       </div>
     )
   }

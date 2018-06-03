@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import AOS from 'aos'
+let AOS
+if (typeof document !== 'undefined') {
+  AOS = require('aos')
+}
 import classNames from 'classnames'
 import { Watch } from 'scrollmonitor-react'
 import 'aos/dist/aos.css'

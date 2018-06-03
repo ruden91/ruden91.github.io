@@ -10,21 +10,20 @@ class AchieveIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
 
     return (
-      <div style={{ background: '#fff' }}>
+      <section className="container">
         <Helmet title={siteTitle} />
-        <div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
+        <div>
           <ul className="article-list">
             {posts.map(({ node }) => {
               return (
-                <li key={node.slug}>
+                <li key={node.id} className="col-3">
                   <ArticlePreview article={node} />
                 </li>
               )
             })}
           </ul>
         </div>
-      </div>
+      </section>
     )
   }
 }
@@ -38,6 +37,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
+          id
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
