@@ -13,6 +13,7 @@ class Template extends React.Component {
 
     this.state = {
       opened: false,
+      posts: [],
     }
     this.Sidebar
     this.openSidebar = this.openSidebar.bind(this)
@@ -30,10 +31,19 @@ class Template extends React.Component {
       opened: false,
     })
   }
+
+  componentDidMount() {
+    const posts = this.props.data.allContentfulBlogPost.edges
+    this.setState({
+      posts,
+    })
+  }
+
   render() {
-    const { opened } = this.state
+    const { opened, posts } = this.state
     const { location, children } = this.props
 
+    console.log(this.state.posts)
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
@@ -51,7 +61,7 @@ class Template extends React.Component {
           onClose={this.closeSidebar}
           fx="ease-in-out"
         >
-          <Header onOpenSidebar={this.openSidebar} />
+          <Header onOpenSidebar={this.openSidebar} posts={posts} />
           {children()}
           <Footer />
         </Sidebar>
@@ -61,3 +71,30 @@ class Template extends React.Component {
 }
 
 export default Template
+
+export const rootQuery = graphql`
+  query RootQuery {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+      edges {
+        node {
+          title
+          slug
+          id
+          categories
+          publishDate(formatString: "MMMM Do, YYYY")
+          tags
+          heroImage {
+            file {
+              url
+            }
+          }
+          description {
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
+      }
+    }
+  }
+`

@@ -8,23 +8,50 @@ export default class header extends Component {
     super()
     this.state = {
       toggleRotate: false,
+      content: '',
     }
   }
 
   handleSearchButton = () => {
-    console.log('????')
     this.setState({
       toggleRotate: !this.state.toggleRotate,
     })
   }
 
+  handleSearchInput = e => {
+    console.log(this.props.posts)
+    this.setState({
+      content: e.target.value,
+    })
+  }
+
+  mapSearchResultList = () => {
+    const { content } = this.state
+    const { posts } = this.props
+    return posts
+      .filter(item => {
+        let node = item.node.title.toLowerCase()
+        let compare = content.toLowerCase()
+        return node.includes(compare)
+      })
+      .map(item => {
+        console.log(item)
+        return (
+          <li>
+            {/* <a href={`/blog/${item.node.slug}`}>{item.node.title}</a> */}
+            <Link to={`/blog/${item.node.slug}`}>{item.node.title}</Link>
+          </li>
+        )
+      })
+  }
+
   render() {
     const { toggleRotate } = this.state
     const { onOpenSidebar } = this.props
+    console.log('render')
     const headerClass = classnames({
       'is-rotate': toggleRotate,
     })
-    console.log(headerClass)
     return (
       <header>
         <div className={`box-rotate ${headerClass}`}>
@@ -53,28 +80,23 @@ export default class header extends Component {
             </div>
           </div>
           <div className="bottom">
-            <input type="text" placeholder="검색어를 입력해 주세요" />
+            <input
+              onChange={this.handleSearchInput}
+              value={this.state.content}
+              type="text"
+              placeholder="검색어를 입력해 주세요"
+            />
             <button
               onClick={this.handleSearchButton}
               className="close-search"
             />
           </div>
         </div>
-        <article className="search-result">
-          <ul>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-            <li>asdfklnfnlksfkldsnfklasnfkldasnfklds</li>
-          </ul>
-        </article>
+        {this.state.toggleRotate && (
+          <article className="search-result">
+            <ul>{this.mapSearchResultList()}</ul>
+          </article>
+        )}
       </header>
     )
   }

@@ -42,6 +42,7 @@ $boxheight: 70px;
       }
     }
     input {
+      width: 80%;
       float: left;
       padding: 20px;
       border: 0;
@@ -90,12 +91,27 @@ $boxheight: 70px;
   position: absolute;
   height: 300px;
   overflow-y: scroll;
-  background-color: #fff;
   z-index: 2;
+  background-color: #f4f7f6;
+  border-bottom: 1px solid #e6eaea;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      list-style: none;
+      line-height: 20px;
+      padding: 15px;
+
+      a {
+        color: #212121;
+      }
+    }
+  }
 }
 
 .close-search {
-  width: 8%;
+  width: 70px;
   float: right;
   position: relative;
   display: inline-block;
