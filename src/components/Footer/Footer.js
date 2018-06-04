@@ -1,7 +1,17 @@
 import React from 'react'
-import './Footer.scss'
+import styled from 'styled-components'
+import { colors } from 'styles/variables'
+
+const StyledFooter = styled.footer`
+  position: relative;
+  text-align: center;
+  background-color: ${colors.brand};
+  padding: 2rem 0 5rem;
+  line-height: 25px;
+  font-size: 12px;
+`
 const Footer = () => (
-  <footer>
+  <StyledFooter>
     <div className="credit">
       <p>&copy; 2018 Ruden</p>
       <p>
@@ -14,6 +24,6 @@ const Footer = () => (
         </a>
       </p>
     </div>
-  </footer>
+  </StyledFooter>
 )
 export default Footer

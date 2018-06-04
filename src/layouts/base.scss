@@ -29,69 +29,9 @@ button {
 }
 
 .header__left-box {
-  float: left;
-  min-width: 115px;
-  height: 70px;
-  padding: 0 23px;
-  border-right: 1px solid #e6eaea;
-  color: #202121;
-  cursor: pointer;
-  overflow: hidden;
   transition: all 0.3s ease-in-out;
   span {
     display: inline-block;
-  }
-  .ico-menu {
-    position: relative;
-    display: inline-block;
-    top: -1px;
-    margin-right: 10px;
-    vertical-align: middle;
-    width: 15px;
-    height: 13px;
-
-    span {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #202121;
-      border-radius: 2px;
-      overflow: hidden;
-      &:nth-of-type(1) {
-        top: 0;
-
-        &:after {
-          transition-delay: 0.1s;
-        }
-      }
-      &:nth-of-type(2) {
-        top: 4px;
-
-        &:after {
-          transition-delay: 0.2s;
-        }
-      }
-      &:nth-of-type(3) {
-        top: 8px;
-        &:after {
-          transition-delay: 0.3s;
-        }
-      }
-
-      &:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: #a6abab;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        z-index: 1;
-        transition: 0.3s;
-      }
-    }
   }
   button {
     &:hover {
@@ -220,28 +160,6 @@ nav {
 
 .side-bar {
   overflow-y: scroll;
-}
-
-.logo-header {
-  display: block;
-  position: absolute;
-  top: 21px;
-  left: 50%;
-  width: auto;
-  height: 23px;
-  line-height: normal;
-  transform: translateX(-50%);
-
-  a {
-    text-decoration: none;
-    display: block;
-    color: #212121;
-    font-size: 23px;
-  }
-}
-
-.header__right-box {
-  float: right;
 }
 
 #disqus_thread {

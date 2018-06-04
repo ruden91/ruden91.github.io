@@ -1,11 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import base from './base.scss'
 import Container from '../components/container'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import SideMenu from '../components/SideMenu'
+import Header from 'components/Header/Header'
+import SearchList from 'components/Search/SearchList'
+import Footer from 'components/Footer/Footer'
+import SideMenu from 'components/SideMenu'
 import Sidebar from 'react-side-bar'
+import '../styles/normalize'
+import LayoutMain from 'components/LayoutMain'
 
 class Template extends React.Component {
   constructor(props) {
@@ -14,10 +16,34 @@ class Template extends React.Component {
     this.state = {
       opened: false,
       posts: [],
+      initialPosts: [],
+      content: '',
+      toggleRotate: false,
     }
     this.Sidebar
     this.openSidebar = this.openSidebar.bind(this)
     this.closeSidebar = this.closeSidebar.bind(this)
+  }
+
+  handleSearchButton = () => {
+    this.setState({
+      toggleRotate: !this.state.toggleRotate,
+    })
+  }
+
+  handleSearchInput = e => {
+    const content = e.target.value
+    const { initialPosts } = this.state
+    const posts = initialPosts.filter(item => {
+      let node = item.node.title.toLowerCase()
+      let compare = content.toLowerCase()
+      return node.includes(compare)
+    })
+
+    this.setState({
+      content,
+      posts,
+    })
   }
 
   openSidebar() {
@@ -36,14 +62,14 @@ class Template extends React.Component {
     const posts = this.props.data.allContentfulBlogPost.edges
     this.setState({
       posts,
+      initialPosts: posts,
     })
   }
 
   render() {
-    const { opened, posts } = this.state
+    const { opened, posts, content, toggleRotate } = this.state
     const { location, children } = this.props
 
-    console.log(this.state.posts)
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
@@ -61,8 +87,15 @@ class Template extends React.Component {
           onClose={this.closeSidebar}
           fx="ease-in-out"
         >
-          <Header onOpenSidebar={this.openSidebar} posts={posts} />
-          {children()}
+          <Header
+            toggleRotate={toggleRotate}
+            content={content}
+            onHandleSearchInput={this.handleSearchInput}
+            onHandleSearchButton={this.handleSearchButton}
+            onOpenSidebar={this.openSidebar}
+          />
+          {toggleRotate && <SearchList posts={posts} />}
+          <LayoutMain>{children()}</LayoutMain>
           <Footer />
         </Sidebar>
       </div>

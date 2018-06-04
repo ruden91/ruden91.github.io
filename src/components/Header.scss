@@ -1,145 +1,73 @@
-@import '../style/mixins/index';
-$boxwidth: 200px;
-$boxheight: 70px;
-.side-bar-panel {
-  .front {
-    @include clearfix;
-  }
-  > header {
-    width: 100%;
-    height: $boxheight;
-    > div {
-      width: 100%;
-      height: $boxheight;
-      position: relative;
-      transition: all 0.3s ease;
-      transform-style: preserve-3d;
-      transform: translate3d(0, 0, -$boxheight/2);
+// @import '../style/mixins/index';
+// $boxwidth: 200px;
+// $boxheight: 70px;
+// .side-bar-panel {
+//   .front {
+//     @include clearfix;
+//   }
+//   > header {
+//     width: 100%;
+//     height: $boxheight;
+//     input {
+//       box-sizing: border-box;
+//     }
+//   }
+// }
 
-      &.is-rotate {
-        transform: translate3d(0, 0, -$boxwidth/2) rotate3d(1, 0, 0, 89deg);
-      }
+// .search-result {
+//   width: 100%;
+//   position: absolute;
+//   height: 300px;
+//   overflow-y: scroll;
+//   z-index: 2;
+//   background-color: #f4f7f6;
+//   border-bottom: 1px solid #e6eaea;
+//   ul {
+//     margin: 0;
+//     padding: 0;
+//     li {
+//       margin: 0;
+//       list-style: none;
+//       line-height: 20px;
+//       padding: 15px;
 
-      > div {
-        width: 100%;
-        height: $boxheight;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        overflow: auto;
+//       a {
+//         color: #212121;
+//       }
+//     }
+//   }
+// }
 
-        &.front {
-          z-index: 2;
-          transform: rotate3d(0, 1, 0, 0deg) translate3d(0, 0, $boxwidth/2);
-        }
-        &.bottom {
-          height: $boxheight;
-          z-index: 2;
-          transform: rotate3d(1, 0, 0, -90deg)
-            translate3d(0, 0, $boxheight - $boxwidth/2);
-        }
-      }
-    }
-    input {
-      width: 80%;
-      float: left;
-      padding: 20px;
-      border: 0;
-      background-color: transparent;
-      font-size: 13px;
-      line-height: normal;
-      outline: none;
-      height: 100%;
-      box-sizing: border-box;
-    }
-    .header__search-button {
-      padding: 28px;
-      float: right;
-      span {
-        display: block;
-        width: 14px;
-        height: 14px;
-        background-size: contain;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-image: url('../images/search.svg');
-      }
-    }
-    .header__view-showcase-button {
-      float: right;
-      position: relative;
-      display: inline-block;
-      padding: 0 35px;
-      background-color: #49c5b6;
-      color: #fff;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 500;
-      border: none;
-      transition: all 0.3s ease-in-out;
+// .close-search {
+//   width: 70px;
+//   float: right;
+//   position: relative;
+//   display: inline-block;
+//   padding: 0 35px;
+//   background-color: #212121;
+//   color: #fff;
+//   text-align: center;
+//   font-size: 13px;
+//   font-weight: 500;
+//   border: none;
+//   height: 100%;
+//   transition: all 0.3s ease;
+//   &:before,
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     width: 20px;
+//     height: 3px;
+//     background: #f4f7f6;
+//     transform: translate(-50%, -50%) rotate(45deg);
+//   }
+//   &:after {
+//     transform: translate(-50%, -50%) rotate(-45deg);
+//   }
 
-      &:hover {
-        background-color: #42ab9e;
-      }
-    }
-  }
-}
-
-.search-result {
-  width: 100%;
-  position: absolute;
-  height: 300px;
-  overflow-y: scroll;
-  z-index: 2;
-  background-color: #f4f7f6;
-  border-bottom: 1px solid #e6eaea;
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      margin: 0;
-      list-style: none;
-      line-height: 20px;
-      padding: 15px;
-
-      a {
-        color: #212121;
-      }
-    }
-  }
-}
-
-.close-search {
-  width: 70px;
-  float: right;
-  position: relative;
-  display: inline-block;
-  padding: 0 35px;
-  background-color: #212121;
-  color: #fff;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 500;
-  border: none;
-  height: 100%;
-  transition: all 0.3s ease;
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 3px;
-    background: #f4f7f6;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  &:after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
-
-  &:hover {
-    opacity: 0.75;
-  }
-}
+//   &:hover {
+//     opacity: 0.75;
+//   }
+// }
