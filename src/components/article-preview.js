@@ -8,7 +8,7 @@ export default ({ article }) => (
       <span className="image-wrap">
         <img
           src={`${article.heroImage.file.url}?fit=scale&w=350&h=196`}
-          alt=""
+          alt={article.title}
         />
       </span>
       <div>
