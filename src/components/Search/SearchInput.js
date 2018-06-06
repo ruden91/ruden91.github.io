@@ -18,8 +18,8 @@ const SearchInput = ({
   content,
   placeholder = '검색어를 입력해 주세요.',
 }) => (
-  <div>
-    <label htmlFor="search-input">search-input</label>
+  <label htmlFor="search-input">
+    search-input
     <StyledSearchInput
       name="search-input"
       value={content}
@@ -28,7 +28,7 @@ const SearchInput = ({
       placeholder={placeholder}
       id="search-input"
     />
-  </div>
+  </label>
 )
 
 export default SearchInput
