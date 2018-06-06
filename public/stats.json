@@ -1,0 +1,120 @@
+{
+  "assetsByChunkName": {
+    "path---blog-dtd-document-type-definition": [
+      "path---blog-dtd-document-type-definition-ffa799bdcc3036f2cb16.js",
+      "path---blog-dtd-document-type-definition-ffa799bdcc3036f2cb16.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-ba81b712fd967357c4d8.js",
+      "component---src-pages-index-js-ba81b712fd967357c4d8.js.map"
+    ],
+    "path---": [
+      "path----dbe3bd51033ce55bbd68.js",
+      "path----dbe3bd51033ce55bbd68.js.map"
+    ],
+    "path---blog-codewars-decode-the-morse-code": [
+      "path---blog-codewars-decode-the-morse-code-1856739b414c33a622a5.js",
+      "path---blog-codewars-decode-the-morse-code-1856739b414c33a622a5.js.map"
+    ],
+    "path---blog-javascript-hoisting": [
+      "path---blog-javascript-hoisting-52cc26157a0459d771e8.js",
+      "path---blog-javascript-hoisting-52cc26157a0459d771e8.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-5a8871660c0d40b2f2c0.js",
+      "component---src-templates-blog-post-js-5a8871660c0d40b2f2c0.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-9bb3b2b1aebf020016d5.js",
+      "component---src-layouts-index-js-9bb3b2b1aebf020016d5.js.map"
+    ],
+    "path---blog-codewars-stop-gninnips-my-sdrow": [
+      "path---blog-codewars-stop-gninnips-my-sdrow-18a5ed539d4db0e02195.js",
+      "path---blog-codewars-stop-gninnips-my-sdrow-18a5ed539d4db0e02195.js.map"
+    ],
+    "path---blog-codewars-array-diff": [
+      "path---blog-codewars-array-diff-a2ac959f0a22a17c58da.js",
+      "path---blog-codewars-array-diff-a2ac959f0a22a17c58da.js.map"
+    ],
+    "path---blog-year-to-century": [
+      "path---blog-year-to-century-cf58c90a19df788efedc.js",
+      "path---blog-year-to-century-cf58c90a19df788efedc.js.map"
+    ],
+    "path---index": [
+      "path---index-7b7f6ad721b10943460d.js",
+      "path---index-7b7f6ad721b10943460d.js.map"
+    ],
+    "component---src-pages-resume-js": [
+      "component---src-pages-resume-js-eadf7040f451d2c2a04a.js",
+      "component---src-pages-resume-js-eadf7040f451d2c2a04a.js.map"
+    ],
+    "commons": [
+      "commons-d42bb9ab899350ae615e.js",
+      "build-js-styles.css",
+      "commons-d42bb9ab899350ae615e.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---blog-1": [
+      "path---blog-1-679f3f210a6a27e8ef8e.js",
+      "path---blog-1-679f3f210a6a27e8ef8e.js.map"
+    ],
+    "path---blog-inline-vs-block-vs-inline-block": [
+      "path---blog-inline-vs-block-vs-inline-block-5cd007caf20cad21d5d5.js",
+      "path---blog-inline-vs-block-vs-inline-block-5cd007caf20cad21d5d5.js.map"
+    ],
+    "path---blog-codewars-will-you-make-it": [
+      "path---blog-codewars-will-you-make-it-daca5c4b4c4109125dad.js",
+      "path---blog-codewars-will-you-make-it-daca5c4b4c4109125dad.js.map"
+    ],
+    "path---blog-codewars-string-reordering": [
+      "path---blog-codewars-string-reordering-ef1406d247764150bfe3.js",
+      "path---blog-codewars-string-reordering-ef1406d247764150bfe3.js.map"
+    ],
+    "path---blog-equal-sides-of-an-array": [
+      "path---blog-equal-sides-of-an-array-1e3bff1657ac078df526.js",
+      "path---blog-equal-sides-of-an-array-1e3bff1657ac078df526.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---resume": [
+      "path---resume-a0e39f21c11f6a62c5ab.js",
+      "path---resume-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---achieve": [
+      "path---achieve-95715c062513d86d590d.js",
+      "path---achieve-95715c062513d86d590d.js.map"
+    ],
+    "app": [
+      "app-ca0b9d57718142d841db.js",
+      "build-js-styles.css",
+      "app-ca0b9d57718142d841db.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---blog-what-is-the-difference-between-equality-and-identity": [
+      "path---blog-what-is-the-difference-between-equality-and-identity-a6bb818720245ff4a9c5.js",
+      "path---blog-what-is-the-difference-between-equality-and-identity-a6bb818720245ff4a9c5.js.map"
+    ],
+    "path---blog-codewars-find-the-parity-outlier": [
+      "path---blog-codewars-find-the-parity-outlier-571a791732095b983de1.js",
+      "path---blog-codewars-find-the-parity-outlier-571a791732095b983de1.js.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-2c3bee524f07afad41b0.js",
+      "component---src-pages-about-js-2c3bee524f07afad41b0.js.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-achieve-js": [
+      "component---src-pages-achieve-js-00b7d8ae479b98de409b.js",
+      "component---src-pages-achieve-js-00b7d8ae479b98de409b.js.map"
+    ]
+  }
+}
