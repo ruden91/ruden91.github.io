@@ -8,6 +8,8 @@ module.exports = {
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   siteDescription: '프론트엔드 개발지식 나눔 블로그', // Website description used for RSS feeds/meta description tag.
   // siteRss: "/rss.xml", // Path to the RSS file.
+  siteLogo:
+    'https://images.ctfassets.net/hu4faubeotg0/6SSGDq4icgQWcIwUQwIq6u/6779bc5bd94d6d10014960d341161f5f/sample.jpeg',
   siteFBAppID: '1722969667786352', // FB Application ID for using app insights
   // siteGATrackingID: "UA-47311644-4", // Tracking code ID for google analytics.
   // disqusShortname: "https-vagr9k-github-io-gatsby-material-starter", // Disqus shortname.

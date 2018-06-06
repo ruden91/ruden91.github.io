@@ -2,7 +2,68 @@ import React, { Component } from 'react'
 import UserCard from './UserCard'
 import Link from 'gatsby-link'
 import classNames from 'classnames'
+import styled from 'styled-components'
 
+const StyledNav = styled.nav``
+
+const StyledNavHeader = styled.header`
+  height: 70px;
+  padding: 0 30px 0 10px;
+  line-height: 70px;
+  font-size: 13px;
+  font-weight: normal;
+  background-color: #f4f7f6;
+  border-bottom: 1px solid #e6eaea;
+  overflow: hidden;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+`
+
+const StyledNavHeaderLeft = styled.div`
+  float: left;
+  height: 100%;
+
+  img {
+    display: inline-block;
+    padding: 26px 0;
+  }
+`
+const StyledNavHeaderRight = styled.div`
+  float: right;
+
+  button {
+    padding-right: 30px;
+    color: #202121;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 33px;
+      right: 27px;
+      width: 20px;
+      height: 3px;
+      background: #202121;
+      transform: rotate(45deg);
+      transition: all 0.3s ease-in-out;
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+`
 export default class SideMenu extends Component {
   constructor(props) {
     super(props)
@@ -30,8 +91,8 @@ export default class SideMenu extends Component {
   render() {
     const { onCloseSidebar } = this.props
     return (
-      <nav className="side-menu">
-        <header>
+      <StyledNav>
+        <StyledNavHeader>
           <div className="pull-left">
             <img
               src="https://www.codewars.com/users/reactorRD/badges/micro"
@@ -41,7 +102,7 @@ export default class SideMenu extends Component {
           <div className="pull-right">
             <button onClick={onCloseSidebar}>CLOSE</button>
           </div>
-        </header>
+        </StyledNavHeader>
         <ul>
           <li>
             <UserCard username="ruden91" />
@@ -61,7 +122,7 @@ export default class SideMenu extends Component {
             </li>
           ))}
         </ul>
-      </nav>
+      </StyledNav>
     )
   }
 }

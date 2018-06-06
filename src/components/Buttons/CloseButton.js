@@ -8,8 +8,7 @@ const StyledCloseButton = styled.button`
   background-color: #212121;
   color: #fff;
   text-align: center;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 0;
   border: none;
   height: 100%;
   transition: all 0.3s ease;
@@ -34,7 +33,7 @@ const StyledCloseButton = styled.button`
 `
 
 const SearchButton = ({ onHandleSearchButton }) => (
-  <StyledCloseButton onClick={onHandleSearchButton} />
+  <StyledCloseButton onClick={onHandleSearchButton}>close</StyledCloseButton>
 )
 
 export default SearchButton

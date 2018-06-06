@@ -18,12 +18,17 @@ const SearchInput = ({
   content,
   placeholder = '검색어를 입력해 주세요.',
 }) => (
-  <StyledSearchInput
-    value={content}
-    onChange={onHandleSearchInput}
-    type="text"
-    placeholder={placeholder}
-  />
+  <div>
+    <label htmlFor="search-input">search-input</label>
+    <StyledSearchInput
+      name="search-input"
+      value={content}
+      onChange={onHandleSearchInput}
+      type="text"
+      placeholder={placeholder}
+      id="search-input"
+    />
+  </div>
 )
 
 export default SearchInput

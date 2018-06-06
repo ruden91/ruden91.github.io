@@ -7,7 +7,7 @@ const StyledShowCaseButton = styled.button`
   padding: 0 35px;
   height: 70px;
   background-color: #49c5b6;
-  color: #fff;
+  color: #212121;
   text-align: center;
   font-size: 13px;
   font-weight: 500;

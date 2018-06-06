@@ -47,7 +47,7 @@ export default class UserCard extends React.Component {
           <div className="github-card user-card">
             <div className="header" />
             <a className="avatar" href={profileUrl}>
-              <img src={avatar_url} />
+              <img src={avatar_url} alt={username} />
             </a>
             <div className="github-card-content">
               <strong>{this.state.user.name}</strong>

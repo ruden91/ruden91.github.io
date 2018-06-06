@@ -10,7 +10,6 @@ export default class SEO extends Component {
     let image
     let postURL
     if (postSEO) {
-      console.log(postNode)
       description = postNode.title
       title = postNode.title
       image = `https:${postNode.heroImage.sizes.src}`
@@ -20,6 +19,7 @@ export default class SEO extends Component {
       description = config.siteDescription
       image = config.siteLogo
     }
+    console.log(image)
     const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
     const blogURL = config.siteUrl + config.pathPrefix
 

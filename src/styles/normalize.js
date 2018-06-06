@@ -25,6 +25,9 @@ injectGlobal`
       list-style: none;
     }
   }
+  label {
+    font-size: 0;
+  }
 
   input[type="submit"],
   input[type="reset"],
@@ -70,5 +73,8 @@ injectGlobal`
     div {
       height: 100%;
     }
+  }
+  #disqus_thread {
+    padding: 20px;
   }
 `

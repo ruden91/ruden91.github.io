@@ -4,6 +4,7 @@ import searchIcon from 'images/search.svg'
 const StyledSearchButton = styled.button`
   padding: 28px;
   float: right;
+  font-size: 0;
   span {
     display: block;
     width: 14px;
@@ -18,6 +19,7 @@ const StyledSearchButton = styled.button`
 const SearchButton = ({ onHandleSearchButton }) => (
   <StyledSearchButton onClick={onHandleSearchButton}>
     <span />
+    search
   </StyledSearchButton>
 )
 

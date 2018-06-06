@@ -9,6 +9,12 @@ const StyledFooter = styled.footer`
   padding: 2rem 0 5rem;
   line-height: 25px;
   font-size: 12px;
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+`
+
+const StyledFooterLink = styled.a`
+  color: #212121;
 `
 const Footer = () => (
   <StyledFooter>
@@ -16,12 +22,12 @@ const Footer = () => (
       <p>&copy; 2018 Ruden</p>
       <p>
         Powered by
-        <a href="#" target="_blank">
+        <StyledFooterLink href="#" target="_blank">
           &nbsp;Gatsby
-        </a>, Theme by
-        <a href="#" target="_blank">
+        </StyledFooterLink>, Theme by
+        <StyledFooterLink href="#" target="_blank">
           &nbsp;Ruden
-        </a>
+        </StyledFooterLink>
       </p>
     </div>
   </StyledFooter>
