@@ -1,4 +1,4 @@
 export const colors = {
-  brand: '#fcfcfc',
+  brand: '#f4f7f6',
   defaultFontColor: '#212121',
 }
