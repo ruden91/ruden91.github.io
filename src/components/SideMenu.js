@@ -64,6 +64,32 @@ const StyledNavHeaderRight = styled.div`
     }
   }
 `
+
+const StyledSideMenuItem = styled.li`
+  &:hover {
+    > span {
+      background-color: #fcfcfc;
+    }
+  }
+  > span {
+    position: relative;
+    display: block;
+    padding: 24px 36px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #f4f7f6;
+    border-bottom: 1px solid #e6eaea;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+
+    a {
+      text-transform: uppercase;
+    }
+  }
+  a {
+    color: #202121;
+  }
+`
 export default class SideMenu extends Component {
   constructor(props) {
     super(props)
@@ -93,22 +119,22 @@ export default class SideMenu extends Component {
     return (
       <StyledNav>
         <StyledNavHeader>
-          <div className="pull-left">
+          <StyledNavHeaderLeft>
             <img
               src="https://www.codewars.com/users/reactorRD/badges/micro"
               alt="codewars-badge"
             />
-          </div>
-          <div className="pull-right">
+          </StyledNavHeaderLeft>
+          <StyledNavHeaderRight>
             <button onClick={onCloseSidebar}>CLOSE</button>
-          </div>
+          </StyledNavHeaderRight>
         </StyledNavHeader>
         <ul>
           <li>
             <UserCard username="ruden91" />
           </li>
           {this.state.sideItems.map(value => (
-            <li
+            <StyledSideMenuItem
               key={Object.keys(value)[0]}
               className={`${
                 value[Object.keys(value)[0]] === this.path ? 'is-active' : ''
@@ -119,7 +145,7 @@ export default class SideMenu extends Component {
                   {Object.keys(value)[0]}
                 </Link>
               </span>
-            </li>
+            </StyledSideMenuItem>
           ))}
         </ul>
       </StyledNav>
