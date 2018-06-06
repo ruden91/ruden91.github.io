@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const StyledSearchInput = styled.input`
-  width: 80%;
   float: left;
   padding: 20px;
   border: 0;

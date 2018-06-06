@@ -19,7 +19,7 @@ export default class SEO extends Component {
       description = config.siteDescription
       image = config.siteLogo
     }
-    console.log(image)
+
     const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
     const blogURL = config.siteUrl + config.pathPrefix
 

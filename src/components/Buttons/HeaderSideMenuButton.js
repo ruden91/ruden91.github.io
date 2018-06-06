@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const StyledSideMenuButton = styled.button`
   padding: 25px 0;
-
   &:hover {
     span {
       color: #64686a;
@@ -24,7 +23,7 @@ const StyledSideMenuBars = styled.span`
   transition: all 0.3s ease-in-out;
 `
 const StyledSideMenuTitle = styled.span`
-  display: inline-block;
+  display: ${props => (props.isMobile ? 'none' : 'inline-block')};
 `
 const StyledSideMenuBar = styled.span`
   position: absolute;
@@ -67,14 +66,14 @@ const StyledSideMenuBar = styled.span`
     }
   }
 `
-const SearchButton = ({ onOpenSidebar }) => (
+const SearchButton = ({ onOpenSidebar, isMobile }) => (
   <StyledSideMenuButton onClick={onOpenSidebar}>
     <StyledSideMenuBars>
       <StyledSideMenuBar />
       <StyledSideMenuBar />
       <StyledSideMenuBar />
     </StyledSideMenuBars>
-    <StyledSideMenuTitle>MENU</StyledSideMenuTitle>
+    <StyledSideMenuTitle isMobile={isMobile}>MENU</StyledSideMenuTitle>
   </StyledSideMenuButton>
 )
 

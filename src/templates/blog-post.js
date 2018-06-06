@@ -9,7 +9,50 @@ import Highlight from 'react-highlight'
 import Img from 'gatsby-image'
 import './highlight.css'
 import { DiscussionEmbed } from 'disqus-react'
+import moment from 'moment'
+import 'moment/locale/ko'
+import styled from 'styled-components'
 
+const StyledBlogPost = styled.div`
+  ul {
+    padding-left: 20px;
+    li {
+      list-style: initial;
+      margin-bottom: 15px;
+    }
+  }
+  p {
+    line-height: 23px;
+  }
+`
+const StyledHeadLine = styled.h1`
+  color: #454545;
+  font-weight: 400;
+  border: none;
+  margin-bottom: 10px;
+`
+const StyledImageContainer = styled.div`
+  margin-bottom: 30px;
+  overflow: hidden;
+  max-height: 400px;
+`
+const StyledSubLine = styled.div`
+  margin-bottom: 20px;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+`
+
+const StyledTime = styled.small`
+  color: #999;
+  float: left;
+`
+const StyledCategories = styled.small`
+  color: #999;
+  float: right;
+`
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
@@ -28,23 +71,30 @@ class BlogPostTemplate extends React.Component {
           <link rel="canonical" href={`${config.siteUrl}/${pathName}`} />
         </Helmet>
         <SEO postPath={pathName} postNode={post} postSEO />
-        <div className="blog-container">
-          <div className="image-wrap">
-            <Img sizes={post.heroImage.sizes} alt={post.title} />
-          </div>
-          <h1 className="section-headline">{post.title}</h1>
-          <p
-            style={{
-              display: 'block',
-            }}
-          >
-            {post.publishDate}
-          </p>
+        <StyledBlogPost className="blog-container">
+          <StyledHeadLine className="section-headline">
+            {post.title}
+          </StyledHeadLine>
+          <StyledSubLine>
+            <StyledTime
+              style={{
+                display: 'block',
+              }}
+            >
+              {moment(post.publishDate).format('YYYY-MM-DD')} ({moment(
+                post.publishDate
+              ).fromNow()})
+            </StyledTime>
+            <StyledCategories>{post.categories.join(', ')}</StyledCategories>
+          </StyledSubLine>
 
+          <StyledImageContainer>
+            <Img sizes={post.heroImage.sizes} alt={post.title} />
+          </StyledImageContainer>
           <Highlight innerHTML={true} language="javascript">
             {post.body.childMarkdownRemark.html}
           </Highlight>
-        </div>
+        </StyledBlogPost>
         <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </div>
     )
@@ -59,7 +109,8 @@ export const pageQuery = graphql`
       title
       id
       tags
-      publishDate(formatString: "MMMM Do, YYYY")
+      categories
+      publishDate
       heroImage {
         sizes(maxWidth: 1280) {
           ...GatsbyContentfulSizes

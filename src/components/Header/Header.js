@@ -8,6 +8,12 @@ import CloseButton from 'components/Buttons/CloseButton'
 import Logo from 'components/Logo'
 import SearchInput from 'components/Search/SearchInput'
 
+let isMobile
+
+if (typeof window !== 'undefined') {
+  isMobile = window.screen.width < 499
+}
+console.log(isMobile)
 const StyledHeader = styled.header`
   width: 100%;
   height: 70px;
@@ -29,7 +35,7 @@ const StyledLeftSideHolder = styled.div`
   min-width: 115px;
   height: 70px;
   padding: 0 23px;
-  border-right: 1px solid #e6eaea;
+  border-right: ${props => (props.isMobile ? 'none' : '1px solid #e6eaea')};
   color: #202121;
   cursor: pointer;
   overflow: hidden;
@@ -84,12 +90,15 @@ export default class header extends Component {
       <StyledHeader>
         <StyledRotate toggleRotate={toggleRotate}>
           <StyledFront>
-            <StyledLeftSideHolder>
-              <HeaderSideMenuButton onOpenSidebar={onOpenSidebar} />
+            <StyledLeftSideHolder isMobile={isMobile}>
+              <HeaderSideMenuButton
+                isMobile={isMobile}
+                onOpenSidebar={onOpenSidebar}
+              />
             </StyledLeftSideHolder>
             <Logo />
             <StyledRightSideHolder>
-              <ShowCaseButton />
+              <ShowCaseButton isMobile={isMobile} />
               <SearchButton onHandleSearchButton={onHandleSearchButton} />
             </StyledRightSideHolder>
           </StyledFront>

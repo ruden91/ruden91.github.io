@@ -45,3 +45,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     )
   })
 }
+
+exports.modifyBabelrc = ({ babelrc }) => {
+  console.log(babelrc)
+}

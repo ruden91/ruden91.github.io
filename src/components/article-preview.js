@@ -2,6 +2,8 @@ import React from 'react'
 import styles from './article-preview.module.css'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import moment from 'moment'
+import 'moment/locale/ko'
 export default ({ article }) => (
   <div className={styles.preview}>
     <Link to={`/blog/${article.slug}`}>
@@ -19,7 +21,9 @@ export default ({ article }) => (
           <p>
             BY <strong>RUDEN</strong>
           </p>
-          <small>{article.publishDate}</small>
+          <small>
+            {moment(article.publishDate).format('YYYY-MM-DD (ddd)')}
+          </small>
         </footer>
       </div>
     </Link>

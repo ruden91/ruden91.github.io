@@ -94,7 +94,7 @@ export const pageQuery = graphql`
           slug
           id
           categories
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate
           tags
           heroImage {
             sizes(maxWidth: 1280) {

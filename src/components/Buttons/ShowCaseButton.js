@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledShowCaseButton = styled.button`
+  display: ${props => (props.isMobile ? 'none' : 'block')}
   float: right;
   position: relative;
   padding: 0 35px;
@@ -18,8 +19,8 @@ const StyledShowCaseButton = styled.button`
   }
 `
 
-const ShowCaseButton = ({}) => (
-  <StyledShowCaseButton>showcase</StyledShowCaseButton>
+const ShowCaseButton = ({ isMobile }) => (
+  <StyledShowCaseButton isMobile={isMobile}>showcase</StyledShowCaseButton>
 )
 
 export default ShowCaseButton

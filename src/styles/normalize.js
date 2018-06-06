@@ -10,6 +10,14 @@ injectGlobal`
     box-sizing: border-box;
   }
   
+  body {
+    overflow-y: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400
+    color: #454545;
+  }
+
   *,
   *::before,
   *::after {
@@ -74,7 +82,12 @@ injectGlobal`
       height: 100%;
     }
   }
+  .side-bar-content {
+    height: 100vh;
+  }
   #disqus_thread {
+    max-width: 960px;
+    margin: 0 auto;
     padding: 20px;
   }
 `

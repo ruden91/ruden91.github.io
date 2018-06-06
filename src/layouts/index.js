@@ -94,6 +94,7 @@ class Template extends React.Component<Props, State> {
           onOpen={this.openSidebar}
           onClose={this.closeSidebar}
           fx="ease-in-out"
+          touch={false}
         >
           <Header
             toggleRotate={toggleRotate}
@@ -122,7 +123,7 @@ export const rootQuery = graphql`
           slug
           id
           categories
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate
           tags
           heroImage {
             file {
