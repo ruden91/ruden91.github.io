@@ -1,15 +1,12 @@
 import React from 'react'
 import styles from './article-preview.module.css'
 import Link from 'gatsby-link'
-
+import Img from 'gatsby-image'
 export default ({ article }) => (
   <div className={styles.preview}>
     <Link to={`/blog/${article.slug}`}>
       <span className="image-wrap">
-        <img
-          src={`${article.heroImage.file.url}?fit=scale&w=350&h=196`}
-          alt={article.title}
-        />
+        <Img sizes={article.heroImage.sizes} alt={article.title} />
       </span>
       <div>
         <h3 className={styles.previewTitle}>{article.title}</h3>

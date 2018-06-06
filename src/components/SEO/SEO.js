@@ -10,9 +10,10 @@ export default class SEO extends Component {
     let image
     let postURL
     if (postSEO) {
+      console.log(postNode)
       description = postNode.title
       title = postNode.title
-      image = `https:${postNode.heroImage.file.url}`
+      image = `https:${postNode.heroImage.sizes.src}`
       postURL = config.siteUrl + config.pathPrefix + postPath
     } else {
       title = config.siteTitle

@@ -11,7 +11,6 @@ import Filters from '../components/Filters/Filters'
 class RootIndex extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = {
       initialPosts: [],
       posts: [],
@@ -98,8 +97,8 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            file {
-              url
+            sizes(maxWidth: 1280) {
+              ...GatsbyContentfulSizes
             }
           }
           description {

@@ -6,13 +6,13 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import './blog-post.scss'
 import Highlight from 'react-highlight'
+import Img from 'gatsby-image'
 import './highlight.css'
 import { DiscussionEmbed } from 'disqus-react'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
-    console.log(post)
     const pathName = `blog/${this.props.pathContext.slug}`
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const disqusShortname = 'https-ruden91-github-io'
@@ -30,10 +30,7 @@ class BlogPostTemplate extends React.Component {
         <SEO postPath={pathName} postNode={post} postSEO />
         <div className="blog-container">
           <div className="image-wrap">
-            <img
-              src={`${post.heroImage.file.url}?w=1180&h=400&fit=fill`}
-              alt=""
-            />
+            <Img sizes={post.heroImage.sizes} alt={post.title} />
           </div>
           <h1 className="section-headline">{post.title}</h1>
           <p
@@ -64,8 +61,8 @@ export const pageQuery = graphql`
       tags
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        file {
-          url
+        sizes(maxWidth: 1280) {
+          ...GatsbyContentfulSizes
         }
       }
       body {

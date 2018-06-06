@@ -13,12 +13,16 @@ const StyledSearchInput = styled.input`
   outline: none;
   height: 100%;
 `
-const SearchInput = ({ onHandleSearchInput, content }) => (
+const SearchInput = ({
+  onHandleSearchInput,
+  content,
+  placeholder = '검색어를 입력해 주세요.',
+}) => (
   <StyledSearchInput
     value={content}
     onChange={onHandleSearchInput}
     type="text"
-    placeholder="검색어를 입력해 주세요"
+    placeholder={placeholder}
   />
 )
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
@@ -24,10 +24,10 @@ const StyledLogoLink = styled(Link)`
     text-decoration: none;
   }
 `
-const Logo = () => (
+const Logo = ({ title = 'FERuden' }) => (
   <StyledLogo>
-    <StyledLogoLink to="/">FERuden</StyledLogoLink>
-  </StyledLogo>  
+    <StyledLogoLink to="/">{title}</StyledLogoLink>
+  </StyledLogo>
 )
 
-export default Logo;
+export default Logo

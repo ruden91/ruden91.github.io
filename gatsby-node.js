@@ -1,3 +1,6 @@
+// if (typeof window === 'undefined') {
+//   global.window = {}
+// }
 const Promise = require('bluebird')
 const path = require('path')
 
@@ -28,7 +31,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         const posts = result.data.allContentfulBlogPost.edges
-        console.log(posts)
+
         posts.forEach((post, index) => {
           createPage({
             path: `/blog/${post.node.slug}/`,

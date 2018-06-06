@@ -33,15 +33,6 @@ const StyledLeftSideHolder = styled.div`
   color: #202121;
   cursor: pointer;
   overflow: hidden;
-
-  > div {
-    width: 100%;
-    height: $boxheight;
-    position: relative;
-    transition: all 0.3s ease;
-    transform-style: preserve-3d;
-    transform: translate3d(0, 0, 70px/2);
-  }
 `
 
 const StyledRightSideHolder = styled.div`

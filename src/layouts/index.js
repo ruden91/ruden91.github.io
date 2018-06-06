@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import Link from 'gatsby-link'
 import Container from '../components/container'
@@ -9,10 +10,17 @@ import Sidebar from 'react-side-bar'
 import '../styles/normalize'
 import LayoutMain from 'components/LayoutMain'
 
-class Template extends React.Component {
+type State = {
+  opend: boolean,
+  posts: [],
+  initialPosts: [],
+  content: string,
+  toggleRotate: boolean,
+}
+
+class Template extends React.Component<Props, State> {
   constructor(props) {
     super(props)
-
     this.state = {
       opened: false,
       posts: [],

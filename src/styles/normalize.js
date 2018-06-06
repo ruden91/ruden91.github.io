@@ -1,3 +1,4 @@
+// @flow
 import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
 import { colors } from 'styles/variables'
@@ -56,6 +57,18 @@ injectGlobal`
   .side-bar-panel {
     > div {
       z-index: 2;
+    }
+  }
+
+  .image-wrap {
+    height: 256px;
+
+    img {
+      height: 100%;
+    }
+
+    div {
+      height: 100%;
     }
   }
 `

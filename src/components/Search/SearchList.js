@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SearchItem from 'components/Search/SearchItem'
 import styled from 'styled-components'
+
 const StyledSearchList = styled.ul`
   width: 100%;
   position: absolute;
