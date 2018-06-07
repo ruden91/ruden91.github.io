@@ -8,9 +8,13 @@
       "component---src-pages-index-js-7dbf531aa50f9880c7ce.js",
       "component---src-pages-index-js-7dbf531aa50f9880c7ce.js.map"
     ],
+    "path---blog-15-helloworld": [
+      "path---blog-15-helloworld-c9c8f26b8f8e88489329.js",
+      "path---blog-15-helloworld-c9c8f26b8f8e88489329.js.map"
+    ],
     "path---": [
-      "path----dbe3bd51033ce55bbd68.js",
-      "path----dbe3bd51033ce55bbd68.js.map"
+      "path----6f30fbed486d5c12b572.js",
+      "path----6f30fbed486d5c12b572.js.map"
     ],
     "path---blog-codewars-decode-the-morse-code": [
       "path---blog-codewars-decode-the-morse-code-1856739b414c33a622a5.js",
@@ -29,8 +33,8 @@
       "component---src-templates-blog-post-js-c85a80fea2b45bcdecf9.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-1f4d3f2bbc4370c6ace9.js",
-      "component---src-layouts-index-js-1f4d3f2bbc4370c6ace9.js.map"
+      "component---src-layouts-index-js-f14b39f257e0f578df51.js",
+      "component---src-layouts-index-js-f14b39f257e0f578df51.js.map"
     ],
     "path---blog-codewars-stop-gninnips-my-sdrow": [
       "path---blog-codewars-stop-gninnips-my-sdrow-18a5ed539d4db0e02195.js",
@@ -45,8 +49,8 @@
       "path---blog-year-to-century-cf58c90a19df788efedc.js.map"
     ],
     "path---index": [
-      "path---index-7b7f6ad721b10943460d.js",
-      "path---index-7b7f6ad721b10943460d.js.map"
+      "path---index-96ea30a619e121ee61a2.js",
+      "path---index-96ea30a619e121ee61a2.js.map"
     ],
     "component---src-pages-resume-js": [
       "component---src-pages-resume-js-eadf7040f451d2c2a04a.js",
@@ -87,13 +91,13 @@
       "path---resume-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---achieve": [
-      "path---achieve-95715c062513d86d590d.js",
-      "path---achieve-95715c062513d86d590d.js.map"
+      "path---achieve-d4672049b3b32d6c17a6.js",
+      "path---achieve-d4672049b3b32d6c17a6.js.map"
     ],
     "app": [
-      "app-ca0b9d57718142d841db.js",
+      "app-4e88a5ab0d2c2e3b1091.js",
       "build-js-styles.css",
-      "app-ca0b9d57718142d841db.js.map",
+      "app-4e88a5ab0d2c2e3b1091.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-what-is-the-difference-between-equality-and-identity": [
